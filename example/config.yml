@@ -1,0 +1,18 @@
+source: source.csv
+destination: destination.csv
+dropfields:
+  - testFieldNoOutput
+dropunmapped: false
+dropconcated: true
+mappings:
+  - from: fieldFrom
+    to: fieldTo
+  - from: anotherFieldFrom
+    to: anotherFieldTo
+concatenations:
+  - separator: ' '
+    outfield: concatenated
+    infields:
+      - fieldConcat1
+      - fieldConcat2
+      - fieldConcat3
